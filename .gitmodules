@@ -1,0 +1,3 @@
+[submodule "DetectarImgGiroCNN"]
+	path = DetectarImgGiroCNN
+	url = https://github.com/CamargoGalan/DetectarGiroConCNN.git
