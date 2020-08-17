@@ -24,13 +24,13 @@ data_generator = ImageDataGenerator()
 
 
 train_generator = data_generator.flow_from_directory(
-                                        directory=r"C:\Users\THE EYE\Desktop\AlgoIA\CNN\transferLearning\images\train",
+                                        directory=r"~\images\train",
                                         target_size=(image_size, image_size),
                                         batch_size=10,
                                         class_mode='categorical')
 
 validation_generator = data_generator.flow_from_directory(
-                                        directory=r"C:\Users\THE EYE\Desktop\AlgoIA\CNN\transferLearning\images\val",
+                                        directory=r"~\images\val",
                                         target_size=(image_size, image_size),
                                         class_mode='categorical')
 
@@ -45,15 +45,15 @@ my_new_model.save('classifier.h5')
 
 from keras.preprocessing import image
 import numpy as np
-test_image = image.load_img(r"C:\Users\THE EYE\Desktop\AlgoIA\CNN\transferLearning\test\imgTest.jpg", target_size = (image_size, image_size)) 
+test_image = image.load_img(r"~\test\imgTest.jpg", target_size = (image_size, image_size)) 
 test_image = image.img_to_array(test_image)
 test_image = np.expand_dims(test_image, axis = 0)
 
-test_image1 = image.load_img(r"C:\Users\THE EYE\Desktop\AlgoIA\CNN\transferLearning\test\imgTest1.jpg", target_size = (image_size, image_size)) 
+test_image1 = image.load_img(r"~\test\imgTest1.jpg", target_size = (image_size, image_size)) 
 test_image1 = image.img_to_array(test_image1)
 test_image1 = np.expand_dims(test_image1, axis = 0)
 
-test_image2 = image.load_img(r"C:\Users\THE EYE\Desktop\AlgoIA\CNN\transferLearning\test\imgTest2.jpg", target_size = (image_size, image_size)) 
+test_image2 = image.load_img(r"~\test\imgTest2.jpg", target_size = (image_size, image_size)) 
 test_image2 = image.img_to_array(test_image2)
 test_image2 = np.expand_dims(test_image2, axis = 0)
 #predict the result
